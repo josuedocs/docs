@@ -1,0 +1,6 @@
+{
+    "/docs/": {
+        "title": "BirbAI Admin Guide",
+        "text": "BirbAI Admin Guide Testing Thsi  is a test. HEading 1 1 Step Title Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Test 2 2 Step Title Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://birb.com/docs/sitemap_index.xml
