@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        BirbGames Admin Guide - Birb Docs
+    </title>
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="BirbGames Admin Guide"/>
+    <link rel="icon" type="image/svg+xml" href="https://birb.com"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://birb.com">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://birb.com">    
+        
+    <meta property="og:image" content="https://birb.com"/>
+    <meta property="og:url" content="https://birb.com/docs/documentation/birbgames-admin-guide/">
+    <meta property="og:title" content="BirbGames Admin Guide - Birb Docs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="BirbGames Admin Guide"/>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content=""/>
+    <meta name="twitter:title" content="BirbGames Admin Guide - Birb Docs" />
+    <meta name="twitter:description" content="BirbGames Admin Guide" />
+    <meta name="twitter:image" content="https://birb.com"/>
+
+    <link rel="canonical" href="https://birb.com/docs/documentation/birbgames-admin-guide/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&subset=latin&display=swap"
+          rel="stylesheet"/>
+    
+    <link rel="preload" href="https://birb.com/docs/_lib/index.css" as="style">
+    <link rel="stylesheet" href="https://birb.com/docs/_lib/index.css"/>
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+        html {
+            scroll-padding-top: 120px;
+            visibility: hidden;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        function getInitialTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        const theme = getInitialTheme();
+        document.documentElement.classList.add('theme-' + theme);
+    </script>
+    
+</head>
+<body>
+
+<div id="root">
+    <sl-drawer id="menu-drawer" label="Documentation" class="drawer__control" placement="top">
+        <div class="body__drawer">
+            <div class="items">
+                
+                    
+                        <sl-button 
+                            class="nav_button  current " 
+                            size="medium" 
+                            href="/docs/"
+                        >
+                            Documentation
+                        </sl-button>
+                         
+                
+            </div>
+            <sl-divider class="divider__drawer"></sl-divider>
+            <nav class="tree">
+                <div class="scroll-panel">
+                    
+                        
+                            
+                            
+                            
+                        
+                            
+                                <div class="tree__group">
+                                    Birb Core Service Admin Guides
+                                </div>
+                            
+                            
+                            
+                                <sl-tree class="tree__with_lines" selection="leaf">
+                                    
+                                
+                                    
+                                        <sl-tree-item 
+                                            id="YWJg-UQaOMKZwCZSoH7BE" 
+                                            style="--indent-level: 0"
+                                            
+                                            class="leaf"
+                                        >
+                                            <a href="/docs/">BirbAI Admin Guide</a>
+                                        </sl-tree-item>                                        
+                                    
+                                
+                                    
+                                        <sl-tree-item 
+                                            id="InxjWwTP5npKdw7yXf8Xm" 
+                                            style="--indent-level: 0"
+                                            
+                                            class="leaf"
+                                        >
+                                            <a href="/docs/documentation/birbshare-admin-guide/">BirbShare Admin Guide</a>
+                                        </sl-tree-item>                                        
+                                    
+                                
+                                    
+                                        <sl-tree-item 
+                                            id="ggeSIZWIGxKFMXx5l8ZuO" 
+                                            style="--indent-level: 0"
+                                            
+                                            class="leaf"
+                                        >
+                                            <a href="/docs/documentation/birbseo-admin-guide/">BirbSEO Admin Guide</a>
+                                        </sl-tree-item>                                        
+                                    
+                                
+                                    
+                                        <sl-tree-item 
+                                            id="WyWKDboGLBfUzleJ_imhq" 
+                                            style="--indent-level: 0"
+                                             selected 
+                                            class="leaf"
+                                        >
+                                            <a href="/docs/documentation/birbgames-admin-guide/">BirbGames Admin Guide</a>
+                                        </sl-tree-item>                                        
+                                    
+                                
+                            
+                                </sl-tree>
+                            
+                        
+                        
+                </div>
+            </nav>
+        </div>
+    </sl-drawer>
+
+    <div class="body__wrapper">
+        <div class="nav__container">
+            <nav>
+                <div class="border-box"></div>
+                <div class="logo">
+                    
+                        <div class="icon">
+                            <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M250,1.67c137.224,0,248.33,111.21,248.33,248.33,0,87.786-45.499,164.896-114.215,209.153C140.967,528.906,18.772,340.792,18.772,340.792,7.785,312.704,1.67,282.027,1.67,250,1.67,112.88,112.879,1.67,250,1.67Z" fill="#0052ff"/>
+  <path d="M18.772,340.792c21.661-29.952,41.768-45.084,48.712-81.049,9.95-51.406,8.085-121.159,63.223-167.487,30.368-25.6,73.691-35.136,113.593-35.136,82.189,0,145.723,33.684,164.482,112.868,1.452,5.908,2.695,12.126,3.732,18.345,12.852,37.312,10.468,69.753,6.633,93.278-3.42,20.626-5.7,36.483-7.669,57.42-3.731,40.629-11.09,82.294-27.362,120.123-7.773,4.974-15.961,9.534-24.253,13.681h-.104c-102.296,33.683-213.402,2.902-213.402,2.902h0c-3.524-1.659-7.048-3.318-10.571-5.182h0c-49.231-36.587-111.003-115.77-111.003-115.77h0c-2.177-4.56-4.146-9.225-6.011-13.993Z"/>
+  <path d="M96.504,315.503h0Z" fill="#69f"/>
+  <path d="M147.185,439.874c6.633-40.006-11.09-82.188-22.905-97.216-13.162-16.791-24.149-24.771-27.776-27.156h0l-1.243-.828h0c21.765,46.017,17.101,89.754-.207,129.347,12.54,10.155,26.221,19.071,40.732,26.533,5.389-7.878,9.327-17.929,11.4-30.68Z" fill="#4f85b7"/>
+  <path d="M395.515,177.968c-.414-2.28-.933-4.871-1.658-7.773-20.107-77.732-132.871-105.924-210.293-70.27-107.79,49.541-65.503,158.988-100.224,209.049-18.033,13.474-36.896,35.343-52.236,58.456,17.206,31.923,41.044,59.594,69.753,81.153,20.832-43.738,24.978-90.378-5.596-133.907,28.812,8.187,46.743,39.073,48.505,42.286,16.169-23.423,28.606-80.945,34.721-113.905,27.154-146.138,199.617-130.902,217.029-65.088Z" fill="#65a1de"/>
+  <path d="M393.857,170.195c-18.242-69.026-130.591-104.058-207.183-68.82-40.629,18.656-68.508,56.693-78.666,113.283-6.218,33.788-6.737,66.644-19.9,87.891-17.826,28.813-37.623,41.353-55.657,67.264-2.694-4.873-5.286-9.95-7.669-15.028,19.278-28.296,39.385-45.293,46.225-57.73,12.541-22.698,16.997-75.66,20.936-97.736,5.908-32.647,20.936-89.548,87.475-114.526,66.436-25.081,143.961-9.95,179.614,25.703,21.868,21.765,30.989,44.982,34.824,59.699Z" fill="#a6cbe7"/>
+  <path d="M396.552,185.43c-3.316-69.337-176.091-94.212-215.579,14.303-14.718,40.525-10.261,102.503-37.208,157.228,1.659,3.212,3.213,6.633,4.768,10.26,5.078,12.334,8.706,24.669,10.676,36.898,5.907,35.343,59.595,76.904,110.276,76.282,103.022-1.245,112.35-59.802,112.557-60.321,5.494-18.656,9.328-38.97,11.194-60.942,1.658-20.73,9.432-61.565,5.079-79.703-4.042-16.168-11.401-15.961-27.258-19.07,0,0-1.14,8.706,1.243,15.753,3.835-.932,5.804-2.279,8.188-3.731,18.345-10.778,12.437,74.934-53.895,69.855-52.236-4.042-59.388-78.976-49.75-118.464,7.981-32.337,27.362-55.242,62.394-58.455,21.246-1.969,43.219,4.974,57.315,20.106Z" fill="#e6e6e6"/>
+  <path d="M250,498.33c39.385,0,76.593-9.121,109.758-25.495,9.017-15.961,16.583-33.582,22.283-52.755-25.082,62.393-162.41,87.267-222.315-13.681l-.518-2.28c3.731,23.527.725,46.744-10.883,68.095-.725,1.347-1.347,2.485-1.969,3.523,32.647,15.028,67.783,22.594,103.643,22.594Z" fill="#c2c2c2"/>
+  <path d="M213.103,139.723c21.247,0,38.452,17.205,38.452,38.452s-17.205,38.348-38.452,38.348-38.348-17.205-38.348-38.348c0-5.701,1.243-11.09,3.42-15.961-7.255,1.555-16.894.622-18.967-9.432-.725-3.42.207-4.457,1.451-4.25,3.213.519,2.488,4.768,10.364,5.597,11.09,1.036,16.065-5.701,24.253-9.95,5.39-2.798,11.401-4.456,17.827-4.456Z"/>
+  <path d="M241.501,172.993c.311,1.658.415,3.42.415,5.182,0,15.961-12.956,28.916-28.916,28.916-6.323,0-12.23-2.073-16.998-5.596,3.835,1.658,8.188,2.591,12.645,2.591,17.515,0,31.922-13.784,32.855-31.093Z" fill="#ccc"/>
+  <path d="M288.762,224.401c-.829,10.157,1.14,24.252,16.998,26.74,11.297,1.866,81.36-8.913,98.461,13.992-13.059-41.146-67.264-27.569-88.201-26.636-9.432.415-20.003-1.451-27.258-14.095Z" fill="#cf8f5b"/>
+  <path d="M376.342,284.514c2.798,2.799-.207,42.39-39.177,45.81-36.068,3.214-53.895-33.269-52.651-71.307,19.173,27.57,63.948,48.713,91.828,25.497Z" fill="#cf8f5b"/>
+  <path d="M285.342,248.757s23.112,33.787,51.304,38.66c21.662,3.731,39.281-3.318,39.592-3.006l.104.103c-4.25,6.322-13.784,13.37-34.928,12.749-20.003-.52-47.365-17.516-56.9-38.246.103-3.419.415-6.841.829-10.26Z" fill="#ffb170"/>
+  <path d="M299.438,256.219c2.798,1.555,9.639,4.248,23.216,2.384,3.732-.519,7.566-.829,11.194-.934,3.628,7.151,6.84,15.857,9.224,21.143-23.009-2.695-38.14-16.687-43.634-22.594Z" fill="#6e2d1d"/>
+  <path d="M289.281,220.358c-.207,1.243-.415,2.591-.519,4.042,1.659,6.84,5.805,14.613,15.858,16.479,18.966,3.524,86.127-15.443,99.601,24.252,0,0,12.126-70.167-42.598-84.469-21.246-5.597-40.731,0-47.883,6.011-10.779,9.017-6.115,13.474-10.26,18.242-6.945,8.084-12.748,5.492-14.199,15.443Z" fill="#ffb170"/>
+  <path d="M333.848,257.67c13.888-.517,25.185,1.243,25.185,1.243,0,0-1.865,8.189.415,15.029.725,2.074,1.243,3.524,1.555,4.56-6.84,1.036-13.266.932-19.071.103-5.701-6.632-7.566-15.441-8.084-20.935Z" fill="#873824"/>
+  <path d="M311.979,198.8s4.974-16.479,35.86-15.754c24.149.518,50.786,24.253,51.926,53.791,0,0-27.57-65.917-87.786-38.037Z" fill="#ffdec2"/>
+  <path d="M213.909,159.312c4.457,0,7.981,3.524,7.981,7.981,0,4.353-3.524,7.981-7.981,7.981-4.352,0-7.98-3.628-7.98-7.981,0-4.456,3.628-7.981,7.98-7.981Z" fill="#fff"/>
+</svg>
+                        </div>
+                    
+                    <div>
+                        
+                            <a href="https://birb.com"><span class="line-clamp-1">Birb Docs</span></a>
+                        
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="container">
+                        
+                            
+                                <sl-button 
+                                    class="nav_button  current " 
+                                    size="medium" 
+                                    href="/docs/"
+                                >
+                                    Documentation
+                                </sl-button>
+                                                    
+                        
+                    </div>
+                </div>
+                <div class="search">
+                    <div>
+                        <sl-button id="search-button" class="search_button">
+                            <sl-icon slot="prefix" name="search"></sl-icon>
+                            Search
+                            <div slot="suffix">
+                                <div class="button__prefix-wrapper">
+                                    <div class="button__prefix-container">
+                                        <sl-icon name="command"></sl-icon>
+                                        <span class="font-w-semibold">K</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </sl-button>
+                    </div>
+                    <div>
+                        <sl-dropdown id="theme-selector" hoist>
+                            <sl-button slot="trigger" class="nav_button">
+                                <sl-icon id="theme-selector-icon" slot="prefix" name="sun"></sl-icon>
+                            </sl-button>
+                            <sl-menu id="theme-selector-menu">
+                                <sl-menu-item type="checkbox" value="light">Light</sl-menu-item>
+                                <sl-menu-item type="checkbox" value="dark">Dark</sl-menu-item>
+                                <sl-menu-item type="checkbox" value="system">System</sl-menu-item>
+                            </sl-menu>
+                        </sl-dropdown>
+                    </div>
+                    <div class="menu">
+                        <sl-button id="menu-open-trigger" class="nav_button" outline>
+                            <sl-icon slot="prefix" name="list"></sl-icon>
+                        </sl-button>
+                    </div>
+                </div>
+            </nav>    
+        </div>
+        <div class="content__container">
+            <aside class="tree">
+                <nav id="nav-tree" class="tree">
+                    
+                        
+                            
+                            
+                            
+                        
+                            
+                                <div class="tree__group">
+                                    Birb Core Service Admin Guides
+                                </div>
+                            
+                            
+                            
+                                <sl-tree class="tree__with_lines" selection="leaf">
+                                    
+                                
+                                    
+                                        <sl-tree-item 
+                                            id="YWJg-UQaOMKZwCZSoH7BE" 
+                                            style="--indent-level: 0"
+                                            
+                                            class="leaf"
+                                        >
+                                            <a href="/docs/">BirbAI Admin Guide</a>
+                                        </sl-tree-item>                                        
+                                    
+                                
+                                    
+                                        <sl-tree-item 
+                                            id="InxjWwTP5npKdw7yXf8Xm" 
+                                            style="--indent-level: 0"
+                                            
+                                            class="leaf"
+                                        >
+                                            <a href="/docs/documentation/birbshare-admin-guide/">BirbShare Admin Guide</a>
+                                        </sl-tree-item>                                        
+                                    
+                                
+                                    
+                                        <sl-tree-item 
+                                            id="ggeSIZWIGxKFMXx5l8ZuO" 
+                                            style="--indent-level: 0"
+                                            
+                                            class="leaf"
+                                        >
+                                            <a href="/docs/documentation/birbseo-admin-guide/">BirbSEO Admin Guide</a>
+                                        </sl-tree-item>                                        
+                                    
+                                
+                                    
+                                        <sl-tree-item 
+                                            id="WyWKDboGLBfUzleJ_imhq" 
+                                            style="--indent-level: 0"
+                                             selected 
+                                            class="leaf"
+                                        >
+                                            <a href="/docs/documentation/birbgames-admin-guide/">BirbGames Admin Guide</a>
+                                        </sl-tree-item>                                        
+                                    
+                                
+                            
+                                </sl-tree>
+                            
+                        
+                        
+                </nav>
+                <nav id="white-label-container" class="menu">
+                    <a class="white-label" href="https://tiledocs.com" target="_blank">
+                        <div class="card-container">
+                            <div class="icon-section">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="title-section">
+                                <sl-tooltip hoist style="--max-width: 30ch;" placement="top-start" content="This documentation site was created using TileDocs, a fast and user-friendly editor for building and hosting documentation projects.">
+                                    <span>Made with TileDocs</span>
+                                <sl-tooltip>
+                            </div>
+                        </div>
+                    </a>
+                </nav>
+            </aside>
+            
+            <article>
+                <main>
+                    <div class="content">
+                        <h1 id="birbgames-admin-guide" dir="ltr"><span style="white-space: pre-wrap;">BirbGames Admin Guide</span></h1><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Welcome to the BirbGames Admin Backend! This documentation serves as your comprehensive guide to navigating and managing the core functionality of the platform. The left-hand navigation panel is your control center, logically ordered to ensure you can quickly access every section.</span></p><div class="image-box-wrapper centered"><div class="image-box" style="width: 100%;"><img src="/docs/_images/bgames-admin.png" style="width: 100%; border-radius: var(--sl-border-radius-small); border: 1px solid var(--sl-color-neutral-300);"></div></div><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Let's walk through each menu item in order, from top to bottom.</span></p><h3 id="dashboard" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Dashboard</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">The&nbsp;</span><b><strong class="text-bold" style="white-space: pre-wrap;">Dashboard</strong></b><span style="white-space: pre-wrap;">&nbsp;is your mission control. Think of this as the platform’s pulse monitor. It’s the first page you see, designed to give you an immediate, high-level overview of the most critical metrics, such as:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Real-time statistics (e.g., number of active users, total transactions).</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Recent activity logs and system alerts.</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Key performance indicators (KPIs) like total revenue or new registrations over a period.</span></li></ul><h3 id="users" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Users</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">The&nbsp;</span><b><strong class="text-bold" style="white-space: pre-wrap;">Users</strong></b><span style="white-space: pre-wrap;">&nbsp;section is where you manage individual user profiles. This is the central hub for managing the people on the platform, allowing you to:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Searching and filtering all registered users.</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Viewing personal details, registration dates, and security logs.</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Managing Know Your Customer (KYC) documentation.</span></li><li value="4" style="text-align: start;"><span style="white-space: pre-wrap;">Enabling, disabling, or banning user accounts.</span></li></ul><h3 id="accounts" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Accounts</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">While&nbsp;</span><b><strong class="text-bold" style="white-space: pre-wrap;">Users</strong></b><span style="white-space: pre-wrap;">&nbsp;focuses on the person,&nbsp;</span><b><strong class="text-bold" style="white-space: pre-wrap;">Accounts</strong></b><span style="white-space: pre-wrap;">&nbsp;focuses on their financial ledger. Here, you can review and adjust:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">The current balance of a user’s funds across different currencies.</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Detailed transaction histories (separate from specific deposit/withdrawal logs).</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Internal account adjustments or corrections.</span></li></ul><h3 id="currencies" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Currencies</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This is where you define and manage all accepted fiat and cryptocurrency types on the platform. This includes:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Activating or deactivating specific currency support.</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Setting up internal conversion rates (if applicable).</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Managing currency display formats and decimal places.</span></li></ul><h3 id="bets" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Bets</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">The&nbsp;</span><b><strong class="text-bold" style="white-space: pre-wrap;">Bets</strong></b><span style="white-space: pre-wrap;">&nbsp;section provides a comprehensive, auditable record of every single wager placed on the platform. You can usually filter this data to review:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Winning and losing bets.</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Bets placed by specific users or on specific games.</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Details like timestamps, amounts, and associated profit/loss.</span></li></ul><h3 id="bonuses" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Bonuses</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This section manages promotional campaigns and user incentives. Here, you can:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Configure automated bonus rules, such as "Welcome Bonus" (e.g., 100% match on first deposit). You can track usage and associated revenue here.</span></li></ul><h3 id="vip" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">VIP</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">The&nbsp;</span><b><strong class="text-bold" style="white-space: pre-wrap;">VIP</strong></b><span style="white-space: pre-wrap;">&nbsp;section manages your loyalty and reward programs. Use this area to:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Define and configure the tiers of your VIP program (e.g., Bronze, Silver, Gold).</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Manually assign or change a user's VIP status.</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Configure the benefits and perks associated with each level.</span></li></ul><h3 id="promo-codes" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Promo codes</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This section manages promotional campaigns and user incentives. Here, you can:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Create, activate, and deactivate static promotional codes (e.g.,&nbsp;</span><code spellcheck="false" style="white-space: pre-wrap;"><span class="text-code">SUMMER25</span></code><span style="white-space: pre-wrap;">) used for marketing campaigns, including setting usage limits and expiry dates.</span></li></ul><h3 id="deposits" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Deposits</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This section manages the processing queue for incoming fund transfers. It provides:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">A log of all incoming funds, often requiring manual review or confirmation, especially for certain payment methods.</span></li></ul><h3 id="withdrawals" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Withdrawals</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This section manages the processing queue for outgoing fund transfers.</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">This is the queue for user requests to cash out. This is a high-security area where requests are typically reviewed, approved, or rejected based on security protocols and balance checks.</span></li></ul><h3 id="deposit-methods" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Deposit methods</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This section handles the technical setup for how money moves into the platform:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Configure and enable payment gateways (e.g., credit card processors, crypto wallet connections, bank transfers) for funding user accounts.</span></li></ul><h3 id="withdrawal-methods" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Withdrawal methods</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This section handles the technical setup for how money moves out of the platform:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Define the options users have for receiving funds, linking them to specific processors or banking systems.</span></li></ul><h3 id="chat" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Chat</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This section is for moderating and managing the platform's public or internal chat feature. Tools here may include:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Reviewing chat logs for compliance.</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Banning or muting users in the chat room.</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Setting up automated moderation rules (e.g., filtering profanity).</span></li></ul><h3 id="settings" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Settings</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">The main configuration hub for the entire platform. This usually contains global settings that affect the user experience, such as:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Site metadata (title, footer text).</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Timezone and locale defaults.</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Security settings and API key management.</span></li></ul><h3 id="maintenance" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Maintenance</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This area is designed for operational tasks, especially when preparing for or recovering from updates. Common features include:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Switching the site to "Maintenance Mode" (offline for users).</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Clearing system caches.</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Running system health checks or data cleanup scripts.</span></li></ul><h3 id="add-ons" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Add-ons</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">If your platform uses third-party extensions, custom modules, or optional features, the&nbsp;</span><b><strong class="text-bold" style="white-space: pre-wrap;">Add-ons</strong></b><span style="white-space: pre-wrap;">&nbsp;section is where they are installed, configured, and managed.</span></p><h3 id="help" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Help</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This section is your internal knowledge base. It typically contains links to internal team guides, support contact information, or direct access to platform-specific developer documentation.</span></p><h3 id="original-games" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">Original games</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This dedicated section provides specific management tools for the proprietary or "in-house" games developed for the Birb platform. Configuration options are typically unique to the game logic, such as:</span></p><ul><li value="1" style="text-align: start;"><span style="white-space: pre-wrap;">Setting house edge parameters.</span></li><li value="2" style="text-align: start;"><span style="white-space: pre-wrap;">Managing game versions and deployment.</span></li><li value="3" style="text-align: start;"><span style="white-space: pre-wrap;">Monitoring game-specific analytics.</span></li></ul><h3 id="english-(language-selector)" dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">English (Language Selector)</span></h3><p dir="ltr" style="text-align: start;"><span style="white-space: pre-wrap;">This option allows you to change the language and localization of the&nbsp;</span><b><strong class="text-bold" style="white-space: pre-wrap;">Admin Panel Interface</strong></b><span style="white-space: pre-wrap;">&nbsp;itself, ensuring the backend team can work in their preferred language.</span></p>
+                    </div>
+                </main>
+                <div class="footer">
+                    <div class="content">
+                        <div class="date">
+                            <div>Nov 28, 2025</div>
+                        </div>
+                        
+                            <a href="/docs/documentation/birbseo-admin-guide/" class="column left-column" title="BirbSEO Admin Guide">
+                                <div class="icon">
+                                    <sl-icon name="chevron-left"></sl-icon>
+                                </div>
+                                <div class="label">
+                                    <div class="title">PREVIOUS</div>
+                                    <div class="line-clamp-2">
+                                        BirbSEO Admin Guide
+                                    </div>
+                                </div>
+                            </a>
+                        
+                         <div></div> 
+                    </div>
+                </div>
+            </article>
+            <aside class="toc">
+                <nav class="toc">
+                    
+                    <div class="title">
+                        <sl-icon class="icon" name="list-nested"></sl-icon>
+                        <div>
+                            On this page
+                        </div>
+                    </div>
+                    <div id="toc-list" class="list">
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#dashboard">Dashboard</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#users">Users</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#accounts">Accounts</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#currencies">Currencies</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#bets">Bets</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#bonuses">Bonuses</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#vip">VIP</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#promo-codes">Promo codes</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#deposits">Deposits</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#withdrawals">Withdrawals</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#deposit-methods">Deposit methods</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#withdrawal-methods">Withdrawal methods</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#chat">Chat</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#settings">Settings</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#maintenance">Maintenance</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#add-ons">Add-ons</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#help">Help</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#original-games">Original games</a>
+                                </div>
+                                
+                        
+                            
+                                <div class="heading-3 line-clamp-2">
+                                    <a href="/docs/documentation/birbgames-admin-guide/#english-(language-selector)">English (Language Selector)</a>
+                                </div>
+                                
+                        
+                    </div>
+                    
+                </nav>
+            </aside>
+        </div>
+        <footer>
+            <div class="stack__column stack__gap-4 stack__center">
+                
+                <div class="stack__row stack__center">
+                    <span><span>Year &copy; Company Name</span></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<sl-dialog id="search-dialog" class="dialog_control dialog__search">
+    <div slot="label">
+        <p>Search</p>
+    </div>
+    <div class="pane stack__column stack__gap-4">
+        <div>
+            <sl-input
+                id="search-input"
+                type="text"
+                size="small"
+                autocomplete="off"
+                autofocus
+                clearable
+                placeholder="Type text you want to search..."
+            >
+            </sl-input>
+        </div>
+        <div id="search-result" class="stack__column stack__gap-4 search-result">
+        </div>
+        <div id="search-footer" class="footer"></div>
+    </div>
+</sl-dialog>
+<script type="module" src="https://birb.com/docs/_lib/index.js" data-shoelace="https://birb.com/docs/_lib"></script>
+<script type="module">
+    import {initPage, initTheme, initSearch, initToc} from 'https://birb.com/docs/_lib/init.js';
+    import {preInitTree} from 'https://birb.com/docs/_lib/pre.js';
+    preInitTree();
+    await initPage();
+    await initTheme('dark');
+    await initSearch('https://birb.com/docs', '1764319323463');
+    document.documentElement.style.visibility = 'visible';
+    document.documentElement.style.opacity = '1';
+    initToc();
+</script>
+
+</body>
+</html>
